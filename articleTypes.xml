@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <IoTypeDef xmlns="http://www.escenic.com/ece40/ArticleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.escenic.com/ece40/ArticleType articleType.xsd" version="2">
 
+	<FieldGroup name="multimediaFields">
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+    <Field type="basic">
+      <name>html</name>
+      <label>Html</label>
+      <layout cols="60" rows="1" wrapLines="false" />
+    </Field>
+		<Field type="basic">
+			<name>view</name>
+			<label>View</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+  </FieldGroup>
 	<FieldGroup name="newsBasic">
+		<Field type="basic">
+			<name>byline</name>
+			<label>By Line</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
 		<Field type="basic">
 			<name>breakingNews</name>
 			<label>Breaking News</label>
@@ -1850,6 +1872,17 @@
 			<label>Varsle nettaviser</label>
 			<label lang="no">Varsle nettaviser</label>
 			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>multimedia</name>
+		<label>Multimedia</label>
+    <title>title</title>
+		<Panel>
+			<name>normal</name>
+			<label>Normal</label>
+			<FieldGroup name="multimediaFields"/>
 		</Panel>
 	</ArticleType>
 
