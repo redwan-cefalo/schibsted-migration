@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<!DOCTYPE imageDef SYSTEM "imageVersions.dtd">
+<imageDef original="a">
+
+	<version id="m"> <!-- Old:fpBoks10spalte -->
+		<maxWidth pix="175" />
+		<maxHeight pix="98" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.1"/>
+	</version>
+
+	<version id="l"> <!-- Old:fpBoks20spalte -->
+		<maxWidth pix="360" />
+		<maxHeight pix="203" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.1"/>
+	</version>
+
+	<version id="k"> <!-- Old:fp05spalte -->
+		<maxWidth pix="80" />
+		<maxHeight pix="45" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.1"/>
+	</version>
+
+	<version id="j"> <!-- Fast:thumb -->
+		<maxWidth pix="68" />
+		<maxHeight pix="68" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.1"/>
+	</version>
+
+	<version id="i"> <!-- fpRightFull, fpRightBoxedFull  -->
+		<maxWidth pix="180" />
+		<maxHeight pix="640" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.1"/>
+	</version>
+	
+	<version id="h"> <!-- Fast:sok -->
+		<maxWidth pix="130" />
+		<maxHeight pix="600" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="g"> <!-- Old:fp15spalte -->
+		<maxWidth pix="280" />
+		<maxHeight pix="158" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="f"> <!-- Old:fp30spalte -->
+		<maxWidth pix="580" />
+		<maxHeight pix="326" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="e"> <!-- Old:artikkel -->
+		<maxWidth pix="268" />
+		<maxHeight pix="780" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="d"> <!-- Old:fullBreddeArtikkel -->
+		<maxWidth pix="780" />
+		<maxHeight pix="439" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="c"> <!-- Old:bildeGalleri -->
+		<maxWidth pix="466" />
+		<maxHeight pix="466" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.8" sharpening="0.0"/>
+	</version>
+	
+	<version id="b"> <!-- Old:Stor -->
+		<maxWidth pix="780" />
+		<maxHeight pix="780" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.65" sharpening="0.0"/>
+	</version>
+
+	<version id="n"> <!-- Fast:adressasoek -->
+		<maxWidth pix="94" />
+		<maxHeight pix="900" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.95" sharpening="0.0"/>
+	</version>
+
+	<version id="o"> <!-- fpFullWidth, articleTitle -->
+		<maxWidth pix="810" />
+		<maxHeight pix="1680" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="p"> <!-- fp15 -->
+		<maxWidth pix="230" />
+		<maxHeight pix="640" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="q"> <!-- fp10 -->
+		<maxWidth pix="150" />
+		<maxHeight pix="480" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="r"> <!-- fpCenterBoxedSmall -->
+		<maxWidth pix="145" />
+		<maxHeight pix="480" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="s"> <!-- fpCenterSmall  -->
+		<maxWidth pix="120" />
+		<maxHeight pix="480" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="t"> <!-- fpHeader, fpCenterBoxedLine  -->
+		<maxWidth pix="106" />
+		<maxHeight pix="480" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="u"> <!-- fpRelatedAsArticle  -->
+		<maxWidth pix="71" />
+		<maxHeight pix="480" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+	
+	<version id="v"> <!-- webTvThumb -->
+		<maxWidth pix="189" />
+		<maxHeight pix="640" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="w"> <!-- fp30, articleLeadText -->
+		<maxWidth pix="470" />
+		<maxHeight pix="1280" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="x"> <!-- fpCenterFull, articleBody, fpCenterBoxedFull -->
+		<maxWidth pix="320" />
+		<maxHeight pix="1280" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="y"> <!-- imageGalleryThumb -->
+		<maxWidth pix="126" />
+		<maxHeight pix="80" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+
+	<version id="z"> <!-- imageGalleryView -->
+		<maxWidth pix="770" />
+		<maxHeight pix="580" />
+		<fallback operation="resize"/>
+		<format name="jpg" compression="0.60" sharpening="0.0"/>
+	</version>
+			
+</imageDef>
