@@ -1,0 +1,1859 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<IoTypeDef xmlns="http://www.escenic.com/ece40/ArticleType" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.escenic.com/ece40/ArticleType articleType.xsd" version="2">
+
+	<FieldGroup name="newsBasic">
+		<Field type="basic">
+			<name>breakingNews</name>
+			<label>Breaking News</label>
+			<label lang="no">Vignett</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>runningHead</name>
+			<label>Running Head</label>
+			<label lang="no">Stikktittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<label lang="no">Tittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>leadText</name>
+			<label>Lead text</label>
+			<label lang="no">Ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>body</name>
+			<label>Body text</label>
+			<label lang="no">Brødtekst</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="10" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>linkText</name>
+			<label>Linktext</label>
+			<label lang="no">Lenketekst</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+				<name>pollId</name>
+				<label>PollId</label>
+				<label lang="no">Poll-Id</label>
+				<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="boolean">
+			<name>frontPagePollDisplay</name>
+			<label>Display poll on frontpage</label>
+			<label lang="no">Vis poll på forsiden</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>allowDebate</name>
+			<label>Debate type</label>
+			<label lang="no">Tillat debatt</label>
+			<enumeration value="true">
+				<label>Moderert debatt</label>
+				<label lang="no">Moderert debatt</label>
+			</enumeration>
+			<enumeration value="false">
+				<label>Ingen debatt</label>
+				<label lang="no">Ingen debatt</label>
+			</enumeration>
+			<enumeration value="facebook">
+				<label>Facebook-debatt</label>
+				<label lang="no">Facebook-debatt</label>
+			</enumeration>
+			<defaultValue>facebook</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpImageDisplayType</name>
+			<label>FrontPage image display</label>
+			<label lang="no">Bildevisning forsider</label>
+			<enumeration value="normal">
+				<label>Normal</label>
+				<label lang="no">Normal</label>
+			</enumeration>
+			<enumeration value="big">
+				<label>Big</label>
+				<label lang="no">Stor</label>
+			</enumeration>
+			<enumeration value="fullWidth">
+				<label>Full width</label>
+				<label lang="no">Full bredde</label>
+			</enumeration>
+			<defaultValue>fullWidth</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpAlternateTitleDisplay</name>
+			<label>Alternate display of frontpage title</label>
+			<label lang="no">Alternativ forsidetittelvisning</label>
+			<enumeration value="false">
+				<label>Off</label>
+				<label lang="no">Av</label>
+			</enumeration>
+			<enumeration value="true">
+				<label>On</label>
+				<label lang="no">På</label>
+			</enumeration>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>bodyFullWidth</name>
+			<label>1st body image fullwidth</label>
+			<label lang="no">Artikkelbilde fullbredde</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpNumRelatedArticles</name>
+			<label>Number of related articles for fp</label>
+			<label lang="no">Antall relaterte artikler for fp</label>
+			<enumeration value="0">
+				<label>0</label>
+				<label lang="no">0</label>
+			</enumeration>
+			<enumeration value="1">
+				<label>1</label>
+				<label lang="no">1</label>
+			</enumeration>
+			<enumeration value="2">
+				<label>2</label>
+				<label lang="no">2</label>
+			</enumeration>
+			<enumeration value="3">
+				<label>3</label>
+				<label lang="no">3</label>
+			</enumeration>
+			<enumeration value="4">
+				<label>4</label>
+				<label lang="no">4</label>
+			</enumeration>
+			<enumeration value="6">
+				<label>6</label>
+				<label lang="no">6</label>
+			</enumeration>
+			<enumeration value="8">
+				<label>8</label>
+				<label lang="no">8</label>
+			</enumeration>
+			<enumeration value="10">
+				<label>10</label>
+				<label lang="no">10</label>
+			</enumeration>
+			<enumeration value="999">
+				<label>All</label>
+				<label lang="no">Alle</label>
+			</enumeration>
+			<defaultValue>0</defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>embed-code-for-live</name>
+			<label>Embed Code for Live</label>
+			<label lang="no">Embed Code for Live</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+
+
+	</FieldGroup>
+
+	<FieldGroup name="newsBasicFPonly">
+		<Field type="basic">
+			<name>breakingNews</name>
+			<label>Breaking News</label>
+			<label lang="no">Vignett</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>runningHead</name>
+			<label>Running Head</label>
+			<label lang="no">Stikktittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<label lang="no">Tittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>leadText</name>
+			<label>Lead text</label>
+			<label lang="no">Ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="enumeration">
+			<name>fpImageDisplayType</name>
+			<label>FrontPage image display</label>
+			<label lang="no">Bildevisning forsider</label>
+			<enumeration value="normal">
+				<label>Normal</label>
+				<label lang="no">Normal</label>
+			</enumeration>
+			<enumeration value="big">
+				<label>Big</label>
+				<label lang="no">Stor</label>
+			</enumeration>
+			<enumeration value="fullWidth">
+				<label>Full width</label>
+				<label lang="no">Full bredde</label>
+			</enumeration>
+			<defaultValue>fullWidth</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpAlternateTitleDisplay</name>
+			<label>Alternate display of frontpage title</label>
+			<label lang="no">Alternativ forsidetittelvisning</label>
+			<enumeration value="false">
+				<label>Off</label>
+				<label lang="no">Av</label>
+			</enumeration>
+			<enumeration value="true">
+				<label>On</label>
+				<label lang="no">På</label>
+			</enumeration>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpNumRelatedArticles</name>
+			<label>Number of related articles for fp</label>
+			<label lang="no">Antall relaterte artikler for fp</label>
+			<enumeration value="0">
+				<label>0</label>
+				<label lang="no">0</label>
+			</enumeration>
+			<enumeration value="1">
+				<label>1</label>
+				<label lang="no">1</label>
+			</enumeration>
+			<enumeration value="2">
+				<label>2</label>
+				<label lang="no">2</label>
+			</enumeration>
+			<enumeration value="3">
+				<label>3</label>
+				<label lang="no">3</label>
+			</enumeration>
+			<enumeration value="4">
+				<label>4</label>
+				<label lang="no">4</label>
+			</enumeration>
+			<enumeration value="6">
+				<label>6</label>
+				<label lang="no">6</label>
+			</enumeration>
+			<enumeration value="8">
+				<label>8</label>
+				<label lang="no">8</label>
+			</enumeration>
+			<enumeration value="10">
+				<label>10</label>
+				<label lang="no">10</label>
+			</enumeration>
+			<enumeration value="999">
+				<label>All</label>
+				<label lang="no">Alle</label>
+			</enumeration>
+			<defaultValue>0</defaultValue>
+		</Field>
+	</FieldGroup>	
+	
+	<FieldGroup name="netmeetBasic">
+		<Field type="basic">
+			<name>breakingNews</name>
+			<label>Breaking News</label>
+			<label lang="no">Vignett</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>runningHead</name>
+			<label>Running Head</label>
+			<label lang="no">Stikktittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<label lang="no">Tittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>leadText</name>
+			<label>Lead text</label>
+			<label lang="no">Ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>body</name>
+			<label>Body text</label>
+			<label lang="no">Brødtekst</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="10" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>linkText</name>
+			<label>Linktext</label>
+			<label lang="no">Lenketekst</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="enumeration">
+			<name>status</name>
+			<label>Status</label>
+			<label lang="no">Status</label>
+			<enumeration value="notStarted">
+				<label>Not started</label>
+				<label lang="no">Ikke startet</label>
+			</enumeration>
+			<enumeration value="current">
+				<label>Ongoing</label>
+				<label lang="no">Pågår</label>
+			</enumeration>
+			<enumeration value="done">
+				<label>Done</label>
+				<label lang="no">Ferdig</label>
+			</enumeration>
+			<defaultValue>notStarted</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpImageDisplayType</name>
+			<label>FrontPage image display</label>
+			<label lang="no">Bildevisning forsider</label>
+			<enumeration value="normal">
+				<label>Normal</label>
+				<label lang="no">Normal</label>
+			</enumeration>
+			<enumeration value="big">
+				<label>Big</label>
+				<label lang="no">Stor</label>
+			</enumeration>
+			<enumeration value="fullWidth">
+				<label>Full width</label>
+				<label lang="no">Full bredde</label>
+			</enumeration>
+			<defaultValue>fullWidth</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpAlternateTitleDisplay</name>
+			<label>Alternate display of frontpage title</label>
+			<label lang="no">Alternativ forsidetittelvisning</label>
+			<enumeration value="false">
+				<label>Off</label>
+				<label lang="no">Av</label>
+			</enumeration>
+			<enumeration value="true">
+				<label>On</label>
+				<label lang="no">På</label>
+			</enumeration>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>bodyFullWidth</name>
+			<label>1st body image fullwidth</label>
+			<label lang="no">Artikkelbilde fullbredde</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpNumRelatedArticles</name>
+			<label>Number of related articles for fp</label>
+			<label lang="no">Antall relaterte artikler for fp</label>
+			<enumeration value="0">
+				<label>0</label>
+				<label lang="no">0</label>
+			</enumeration>
+			<enumeration value="1">
+				<label>1</label>
+				<label lang="no">1</label>
+			</enumeration>
+			<enumeration value="2">
+				<label>2</label>
+				<label lang="no">2</label>
+			</enumeration>
+			<enumeration value="3">
+				<label>3</label>
+				<label lang="no">3</label>
+			</enumeration>
+			<enumeration value="4">
+				<label>4</label>
+				<label lang="no">4</label>
+			</enumeration>
+			<enumeration value="6">
+				<label>6</label>
+				<label lang="no">6</label>
+			</enumeration>
+			<enumeration value="8">
+				<label>8</label>
+				<label lang="no">8</label>
+			</enumeration>
+			<enumeration value="10">
+				<label>10</label>
+				<label lang="no">10</label>
+			</enumeration>
+			<enumeration value="999">
+				<label>All</label>
+				<label lang="no">Alle</label>
+			</enumeration>
+			<defaultValue>0</defaultValue>
+		</Field>
+	</FieldGroup>
+
+
+	<FieldGroup name="fastSearch">
+
+		<Field type="hidden">
+			<name>fastSearchKeywords</name>
+			<label>Keywords from Fast search engine</label>
+			<label lang="no">Nøkkelord fra Fast søkemotor</label>
+		</Field>
+		<Field type="hidden">
+			<name>fastSearchTimestamp</name>
+			<label>Timestamp for Fast search engine integration</label>
+			<label lang="no">Timestamp for Fast søkemotor-integrasjon</label>
+		</Field>
+	</FieldGroup>
+	
+	
+	<FieldGroup name="newsFrontPage">
+		<Field type="basic">
+			<name>frontPageRunningHead</name>
+			<label>FrontPage Running Head</label>
+			<label lang="no">Forside Stikktittel</label>
+			<inherits>newsBasic.runningHead</inherits>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>frontPageTitle</name>
+			<label>Frontpage title</label>
+			<label lang="no">Forsidetittel</label>
+			<inherits>newsBasic.title</inherits>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>frontPageLeadText</name>
+			<label>Frontpage lead text</label>
+			<label lang="no">Forsideingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<inherits>newsBasic.leadText</inherits>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+	</FieldGroup>
+
+	<FieldGroup name="slideShow">
+		<Field type="basic">
+			<name>frontPageTitle</name>
+			<label>Frontpage title</label>
+			<label lang="no">Forsidetittel</label>
+			<inherits>newsBasic.title</inherits>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+ 		<Field type="basic">
+			<name>linkUrl</name>
+			<label>LinkURL</label>
+			<label lang="no">LinkURL</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+			<defaultValue>/live/</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>show_live_header</name>
+			<label>Show Live Header</label>
+			<label lang="no">Vis Live header øverst i bildene</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball1</name>
+			<label>1: Kampen direkte Id (Kamp 1) - Obligatorisk</label>
+			<label lang="no">1: Kampen direkte Id (Kamp 1) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive1</name>
+			<label>1: Nye Live Id (Kamp 1) - Valgfritt</label>
+			<label lang="no">1: Nye Live Id (Kamp 1) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball2</name>
+			<label>2: Kampen direkte Id (Kamp 2) - Obligatorisk</label>
+			<label lang="no">2: Kampen direkte Id (Kamp 2) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive2</name>
+			<label>2: Nye Live Id (Kamp 2) - Valgfritt</label>
+			<label lang="no">2: Nye Live Id (Kamp 2) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>		
+		<Field type="basic">
+			<name>matchIdFotball3</name>
+			<label>3: Kampen direkte Id (Kamp 3) - Obligatorisk</label>
+			<label lang="no">3: Kampen direkte Id (Kamp 3) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive3</name>
+			<label>3: Nye Live Id (Kamp 3) - Valgfritt</label>
+			<label lang="no">3: Nye Live Id (Kamp 3) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball4</name>
+			<label>4: Kampen direkte Id (Kamp 4) - Obligatorisk</label>
+			<label lang="no">4: Kampen direkte Id (Kamp 4) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive4</name>
+			<label>4: Nye Live Id (Kamp 4) - Valgfritt</label>
+			<label lang="no">4: Nye Live Id (Kamp 4) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball5</name>
+			<label>5: Kampen direkte Id (Kamp 5) - Obligatorisk</label>
+			<label lang="no">5: Kampen direkte Id (Kamp 5) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive5</name>
+			<label>5: Nye Live Id (Kamp 5) - Valgfritt</label>
+			<label lang="no">5: Nye Live Id (Kamp 5) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball6</name>
+			<label>6: Kampen direkte Id (Kamp 6) - Obligatorisk</label>
+			<label lang="no">6: Kampen direkte Id (Kamp 6) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive6</name>
+			<label>6: Nye Live Id (Kamp 6) - Valgfritt</label>
+			<label lang="no">6: Nye Live Id (Kamp 6) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball7</name>
+			<label>7: Kampen direkte Id (Kamp 7) - Obligatorisk</label>
+			<label lang="no">7: Kampen direkte Id (Kamp 7) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive7</name>
+			<label>7: Nye Live Id (Kamp 7) - Valgfritt</label>
+			<label lang="no">7: Nye Live Id (Kamp 7) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball8</name>
+			<label>8: Kampen direkte Id (Kamp 8) - Obligatorisk</label>
+			<label lang="no">8: Kampen direkte Id (Kamp 8) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive8</name>
+			<label>8: Nye Live Id (Kamp 8) - Valgfritt</label>
+			<label lang="no">8: Nye Live Id (Kamp 8) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball9</name>
+			<label>9: Kampen direkte Id (Kamp 9) - Obligatorisk</label>
+			<label lang="no">9: Kampen direkte Id (Kamp 9) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive9</name>
+			<label>9: Nye Live Id (Kamp 9) - Valgfritt</label>
+			<label lang="no">9: Nye Live Id (Kamp 9) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdFotball10</name>
+			<label>10: Kampen direkte Id (Kamp 10) - Obligatorisk</label>
+			<label lang="no">10: Kampen direkte Id (Kamp 10) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive10</name>
+			<label>10: Nye Live Id (Kamp 10) - Valgfritt</label>
+			<label lang="no">10: Nye Live Id (Kamp 10) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>		
+		<Field type="basic">
+			<name>matchIdFotball11</name>
+			<label>11: Kampen direkte Id (Kamp 11) - Obligatorisk</label>
+			<label lang="no">11: Kampen direkte Id (Kamp 11) - Obligatorisk</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>matchIdLive11</name>
+			<label>11: Nye Live Id (Kamp 11) - Valgfritt</label>
+			<label lang="no">11: Nye Live Id (Kamp 11) - Valgfritt</label>
+			<layout cols="10" rows="1" wrapLines="false" />
+			<defaultValue></defaultValue>
+		</Field>		
+
+
+	
+	</FieldGroup>
+
+	<FieldGroup name="centralQuizGroup">
+		<Field type="basic">
+		    <name>quiz</name>
+		    <label>Quiz-xml</label>
+		    <label lang="no">Quiz-xml</label>
+		    <constraint allowEmpty="true"/>
+		    <layout rows="40" cols="70"/>
+		    <pluginEditor type="panel" class="no.firestore.plugins.quizeditor.SimpleQuizEditor">
+			<Editor xmlns="http://www.firestore.com/QuizEditor"></Editor>
+		    </pluginEditor>
+		</Field>
+		<Field type="enumeration">
+			<name>quizType</name>
+			<label>Quiz Type</label>
+			<label lang="no">Quiz type</label>
+			<enumeration value="innsending">
+				<label>Innsending quiz</label>
+				<label lang="no">Innsending quiz</label>
+			</enumeration>
+			<enumeration value="tippekupong">
+				<label>Tippekupong quiz</label>
+				<label lang="no">Tippekupong quiz</label>
+			</enumeration>
+			<defaultValue>innsending</defaultValue>
+		</Field>
+
+	</FieldGroup>
+
+
+	<FieldGroup name="video">
+		<Field type="basic">
+			<name>videourl</name>
+			<label>VideoURL</label>
+			<label lang="no">VideoURL</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="enumeration">
+			<name>videoFormat</name>
+			<label>Video format</label>
+			<label lang="no">Video format</label>
+			<enumeration value="FLV">
+				<label>Flash Video (FLV)</label>
+				<label lang="no">Flash Video (FLV)</label>
+			</enumeration>
+			<enumeration value="WMV">
+				<label>Windows Media format (WMV)</label>
+				<label lang="no">Windows Media format (WMV)</label>
+			</enumeration>
+			<defaultValue>FLV</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>videoSource</name>
+			<label>Video source</label>
+			<label lang="no">Video kilde</label>
+			<enumeration value="aa">
+				<label>Adresseavisen</label>
+			</enumeration>
+			<enumeration value="ap">
+				<label>Aftenposten</label>
+			</enumeration>
+			<enumeration value="fnv">
+				<label>Fedrelandsvennen</label>
+			</enumeration>
+			<enumeration value="bt">
+				<label>Bergens Tidende</label>
+			</enumeration>
+			<enumeration value="btr">
+				<label>Bladet Tromsø</label>
+			</enumeration>
+			<enumeration value="sa">
+				<label>Stavanger Aftenblad</label>
+			</enumeration>
+			<defaultValue>aa</defaultValue>
+		</Field>
+	</FieldGroup>
+
+
+
+
+
+
+
+
+
+	<FieldGroup name="xstream_video">
+                <Field type="basic">
+                        <name>videourl</name>
+                        <label>VideoURL</label>
+                        <label lang="no">VideoURL</label>
+                        <layout cols="60" rows="1" wrapLines="false" />
+                </Field>
+		<Field type="basic">
+			<name>status</name>
+			<label>Status</label>
+			<label lang="no">Status</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="enumeration">
+			<name>format</name>
+			<label>Format</label>
+			<label lang="no">Format</label>
+			<enumeration value="flv">
+				<label>FLV</label>
+				<label lang="no">FLV</label>
+			</enumeration>
+			<enumeration value="wmv">
+				<label>WMV</label>
+				<label lang="no">WMV</label>
+			</enumeration>
+			<defaultValue>flv</defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>mediaId</name>
+			<label>Media ID</label>
+			<label lang="no">Media ID</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>videoURL</name>
+			<label>URL</label>
+			<label lang="no">URL</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>createdDate</name>
+			<label>Created</label>
+			<label lang="no">Opprettet</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>lastEditedDate</name>
+			<label>Last edited</label>
+			<label lang="no">Sist redigert</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>activationDate</name>
+			<label>Activation date</label>
+			<label lang="no">Aktiviseringsdato</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>createdBy</name>
+			<label>Created by</label>
+			<label lang="no">Opprettet av</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>updatedBy</name>
+			<label>Updated by</label>
+			<label lang="no">Oppdatert av</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>duration</name>
+			<label>Duration</label>
+			<label lang="no">Lengde</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>thumbnailURL</name>
+			<label>Thumbnail URL</label>
+			<label lang="no">Thumbnail URL</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>videoRating</name>
+			<label>Rating</label>
+			<label lang="no">Rating</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>videoHits</name>
+			<label>Hits</label>
+			<label lang="no">Hits</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>videoTags</name>
+			<label>Tags</label>
+			<label lang="no">Tags</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>videoCategories</name>
+			<label>Categories</label>
+			<label lang="no">Kategorier</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+	</FieldGroup>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<FieldGroup name="newsMailto">
+		<Field type="boolean">
+			<name>mailto_aa</name>
+			<label>Mail to Adresseavisen </label>
+			<label lang="no">Send mail til Adresseavisen </label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_bt</name>
+			<label>Mail to Bergens Tidende</label>
+			<label lang="no">Send mail til Bergens Tidende</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_ap</name>
+			<label>Mail to Aftenposten </label>
+			<label lang="no">Send mail til Aftenposten </label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_btr</name>
+			<label>Mail to Bladet Tromsø</label>
+			<label lang="no">Send mail til Bladet Tromsø</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_sa</name>
+			<label>Mail to Stavanger Aftenblad</label>
+			<label lang="no">Send mail til Stavanger Aftenblad</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_fvn</name>
+			<label>Mail to Fedrelandsvennen </label>
+			<label lang="no">Send mail til Fedrelandsvennen </label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_smp</name>
+			<label>Mail to Sunnmørsposten </label>
+			<label lang="no">Send mail til Sunnmørsposten </label>
+			<defaultValue>false</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>mailto_rb</name>
+			<label>Mail to Romsdals Budstikke </label>
+			<label lang="no">Send mail til Romsdals Budstikke </label>
+			<defaultValue>false</defaultValue>
+		</Field>		
+		<Field type="boolean">
+			<name>mailto_ha</name>
+			<label>Mail to Hamar Arbeiderblad </label>
+			<label lang="no">Send mail til Hamar Arbeiderblad</label>
+			<defaultValue>false</defaultValue>
+		</Field>
+	</FieldGroup>
+	
+	
+	
+	
+	<FieldGroup name="wap">
+		<Field type="basic">
+			<name>wapTitle</name>
+			<label>WAP title</label>
+			<label lang="no">WAP tittel</label>
+			<inherits>newsBasic.title</inherits>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>wapLeadText</name>
+			<label>WAP lead text</label>
+			<label lang="no">WAP ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<inherits>newsBasic.leadText</inherits>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>wapBody</name>
+			<label>WAP bodytext</label>
+			<label lang="no">WAP brødtekst</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+			</XHTMLEditor>
+			</pluginEditor>
+			<inherits>newsBasic.body</inherits>
+			<layout cols="45" rows="10" wrapLines="true" />
+		</Field>
+	</FieldGroup>  
+
+	<FieldGroup name="dbLinks">
+		<Field type="basic">
+			<name>teamCategory</name>
+			<label>Related teams</label>
+			<label lang="no">Relaterte lag</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.CategoryEditor">
+				<Editor xmlns="http://www.escenic.com/CategoryEditor">
+					<param>
+						<name>root</name>
+						<value>path=Lag</value>
+					</param>
+					<param>
+						<name>hideRoot</name>
+						<value>true</value>
+					</param>
+				</Editor>
+			</pluginEditor>
+		</Field>
+		<Field type="boolean">
+			<name>showRelatedTeams</name>
+			<label>Show related teams</label>
+			<label lang="no">Vis relaterte lag</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+		<Field type="boolean">
+			<name>showRelatedPlayers</name>
+			<label>Show related players</label>
+			<label lang="no">Vis relaterte spillere</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>leagueCategory</name>
+			<label>Related leagues/cups</label>
+			<label lang="no">Relaterte ligaer/cup</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.CategoryEditor">
+				<Editor xmlns="http://www.escenic.com/CategoryEditor">
+					<param>
+						<name>root</name>
+						<value>path=Konkurranser</value>
+					</param>
+					<param>
+						<name>hideRoot</name>
+						<value>true</value>
+					</param>
+				</Editor>
+			</pluginEditor>
+		</Field>
+		<Field type="boolean">
+			<name>showRelatedLeagues</name>
+			<label>Show related leagues</label>
+			<label lang="no">Vis relaterte ligaer</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+	</FieldGroup>  
+	
+	
+
+	<FieldGroup name="sportDbLinks">
+		<Field type="basic">
+			<name>sportTeamCategory</name>
+			<label>Related teams</label>
+			<label lang="no">Relaterte lag</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.CategoryEditor">
+				<Editor xmlns="http://www.escenic.com/CategoryEditor">
+					<param>
+						<name>root</name>
+						<value>path=SportLag</value>
+					</param>
+					<param>
+						<name>hideRoot</name>
+						<value>true</value>
+					</param>
+				</Editor>
+			</pluginEditor>
+		</Field>
+		<Field type="boolean">
+			<name>sportShowRelatedTeams</name>
+			<label>Show related teams</label>
+			<label lang="no">Vis relaterte lag</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+		<Field type="basic">
+			<name>sportsCategory</name>
+			<label>Sport</label>
+			<label lang="no">Sport</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.CategoryEditor">
+				<Editor xmlns="http://www.escenic.com/CategoryEditor">
+					<param>
+						<name>root</name>
+						<value>path=SportIdrett</value>
+					</param>
+					<param>
+						<name>hideRoot</name>
+						<value>true</value>
+					</param>
+				</Editor>
+			</pluginEditor>
+		</Field>
+		<Field type="boolean">
+			<name>sportShowRelatedSports</name>
+			<label>Show related sports</label>
+			<label lang="no">Vis relaterte idretter</label>
+			<defaultValue>true</defaultValue>
+		</Field>
+	</FieldGroup>  
+	
+
+
+
+	<FieldGroup name="iframeBasic">
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<label lang="no">Tittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>leadText</name>
+			<label>Lead text</label>
+			<label lang="no">Ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>linkText</name>
+			<label>Linktext</label>
+			<label lang="no">Lenketekst</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>iframeURL</name>
+			<label>iFrame URL</label>
+			<label lang="no">URL for iFrame</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>iframeHeight</name>
+			<label>iFrame height (pixels)</label>
+			<label lang="no">iFrame høyde (i pixler)</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+				<name>debateId</name>
+				<label>DebateId</label>
+				<label lang="no">Debatt-Id fra supporter</label>
+				<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+
+		<Field type="enumeration">
+			<name>allowDebate</name>
+			<label>Debate type</label>
+			<label lang="no">Tillat debatt</label>
+			<enumeration value="true">
+				<label>Moderert debatt</label>
+				<label lang="no">Moderert debatt</label>
+			</enumeration>
+			<enumeration value="false">
+				<label>Ingen debatt</label>
+				<label lang="no">Ingen debatt</label>
+			</enumeration>
+			<enumeration value="facebook">
+				<label>Facebook-debatt</label>
+				<label lang="no">Facebook-debatt</label>
+			</enumeration>
+			<defaultValue>facebook</defaultValue>
+		</Field>
+
+		<Field type="enumeration">
+			<name>fpImageDisplayType</name>
+			<label>FrontPage image display</label>
+			<label lang="no">Bildevisning forsider</label>
+			<enumeration value="normal">
+				<label>Normal</label>
+				<label lang="no">Normal</label>
+			</enumeration>
+			<enumeration value="big">
+				<label>Big</label>
+				<label lang="no">Stor</label>
+			</enumeration>
+			<enumeration value="fullWidth">
+				<label>Full width</label>
+				<label lang="no">Full bredde</label>
+			</enumeration>
+			<defaultValue>fullWidth</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpNumRelatedArticles</name>
+			<label>Number of related articles for fp</label>
+			<label lang="no">Antall relaterte artikler for fp</label>
+			<enumeration value="0">
+				<label>0</label>
+				<label lang="no">0</label>
+			</enumeration>
+			<enumeration value="1">
+				<label>1</label>
+				<label lang="no">1</label>
+			</enumeration>
+			<enumeration value="2">
+				<label>2</label>
+				<label lang="no">2</label>
+			</enumeration>
+			<enumeration value="3">
+				<label>3</label>
+				<label lang="no">3</label>
+			</enumeration>
+			<enumeration value="4">
+				<label>4</label>
+				<label lang="no">4</label>
+			</enumeration>
+			<enumeration value="6">
+				<label>6</label>
+				<label lang="no">6</label>
+			</enumeration>
+			<enumeration value="8">
+				<label>8</label>
+				<label lang="no">8</label>
+			</enumeration>
+			<enumeration value="10">
+				<label>10</label>
+				<label lang="no">10</label>
+			</enumeration>
+			<enumeration value="999">
+				<label>All</label>
+				<label lang="no">Alle</label>
+			</enumeration>
+			<defaultValue>0</defaultValue>
+		</Field>
+	</FieldGroup>	
+
+	<FieldGroup name="forwardBasic">
+		<Field type="basic">
+			<name>title</name>
+			<label>Title</label>
+			<label lang="no">Tittel</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>leadText</name>
+			<label>Lead text</label>
+			<label lang="no">Ingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+		<Field type="basic">
+			<name>linkText</name>
+			<label>Linktext</label>
+			<label lang="no">Lenketekst</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>forwardURL</name>
+			<label>Forward URL</label>
+			<label lang="no">URL for lenke</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="enumeration">
+			<name>fpImageDisplayType</name>
+			<label>FrontPage image display</label>
+			<label lang="no">Bildevisning forsider</label>
+			<enumeration value="normal">
+				<label>Normal</label>
+				<label lang="no">Normal</label>
+			</enumeration>
+			<enumeration value="big">
+				<label>Big</label>
+				<label lang="no">Stor</label>
+			</enumeration>
+			<enumeration value="fullWidth">
+				<label>Full width</label>
+				<label lang="no">Full bredde</label>
+			</enumeration>
+			<defaultValue>fullWidth</defaultValue>
+		</Field>
+		<Field type="enumeration">
+			<name>fpNumRelatedArticles</name>
+			<label>Number of related articles for fp</label>
+			<label lang="no">Antall relaterte artikler for fp</label>
+			<enumeration value="0">
+				<label>0</label>
+				<label lang="no">0</label>
+			</enumeration>
+			<enumeration value="1">
+				<label>1</label>
+				<label lang="no">1</label>
+			</enumeration>
+			<enumeration value="2">
+				<label>2</label>
+				<label lang="no">2</label>
+			</enumeration>
+			<enumeration value="3">
+				<label>3</label>
+				<label lang="no">3</label>
+			</enumeration>
+			<enumeration value="4">
+				<label>4</label>
+				<label lang="no">4</label>
+			</enumeration>
+			<enumeration value="6">
+				<label>6</label>
+				<label lang="no">6</label>
+			</enumeration>
+			<enumeration value="8">
+				<label>8</label>
+				<label lang="no">8</label>
+			</enumeration>
+			<enumeration value="10">
+				<label>10</label>
+				<label lang="no">10</label>
+			</enumeration>
+			<enumeration value="999">
+				<label>All</label>
+				<label lang="no">Alle</label>
+			</enumeration>
+			<defaultValue>0</defaultValue>
+		</Field>
+	</FieldGroup>	
+
+	<FieldGroup name="newsFrontPageIframe">
+		<Field type="basic">
+			<name>frontPageTitle</name>
+			<label>Frontpage title</label>
+			<label lang="no">Forsidetittel</label>
+			<inherits>iframeBasic.title</inherits>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>frontPageLeadText</name>
+			<label>Frontpage lead text</label>
+			<label lang="no">Forsideingress</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<inherits>iframeBasic.leadText</inherits>
+			<layout cols="45" rows="4" wrapLines="true" />
+		</Field>
+	</FieldGroup>
+
+	<FieldGroup name="author">
+		<Field type="basic">
+			<name>authorName</name>
+			<label>Name</label>
+			<label lang="no">Navn</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>authorMail</name>
+			<label>eMail</label>
+			<label lang="no">Epost</label>
+			<layout cols="60" rows="1" wrapLines="false" />
+		</Field>
+		<Field type="basic">
+			<name>authorInfo</name>
+			<label>Info</label>
+			<label lang="no">Info</label>
+			<pluginEditor type="panel" class="neo.client.gui.components.editor.XHTMLEditor">
+				<XHTMLEditor xmlns="http://www.escenic.com/XHTMLEditor">
+					<param>
+						<name>ecs_all_html</name>
+					</param>
+				</XHTMLEditor>
+			</pluginEditor>
+			<layout cols="45" rows="6" wrapLines="true" />
+		</Field>
+	</FieldGroup>
+
+	
+
+	<ArticleType>
+		<name>sportArticle</name>
+		<label>Sport</label>
+		<label lang="no">Sport</label>
+		<description>Sport artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>sportDbLinksGroup</name>
+			<label>Category links</label>
+			<label lang="no">Kategori-lenker</label>
+			<FieldGroup name="sportDbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+
+	<ArticleType>
+		<name>standardArticle</name>
+		<label>Standard</label>
+		<label lang="no">Standard</label>
+		<description>Standard artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+			<FieldGroup name="fastSearch"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+
+
+	<ArticleType>
+		<name>fxtvArticle</name>
+		<label>Standard fxtv</label>
+		<label lang="no">Standard fxtv</label>
+		<description>Standard artikkeltype med fxt-innhold</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+	
+	<ArticleType>
+		<name>xstreamVideoArticle</name>
+		<label>Video (xstream)</label>
+		<label lang="no">Video (xstream)</label>
+		<description>xstream video artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasicFPonly"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>video</name>
+			<label>Video</label>
+			<label lang="no">Video</label>
+			<FieldGroup name="xstream_video"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>videoArticle</name>
+		<label>Video</label>
+		<label lang="no">Video</label>
+		<description>Video artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasicFPonly"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>video</name>
+			<label>Video</label>
+			<label lang="no">Video</label>
+			<FieldGroup name="video"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+	
+	<ArticleType>
+		<name>fpOnlyArticle</name>
+		<label>FrontPage only</label>
+		<label lang="no">Kun forside</label>
+		<description>Kun forside artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasicFPonly"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>liveSlideShowArticle</name>
+		<label>FrontPage Live Slide Show</label>
+		<label lang="no">Forside live bildekarusell</label>
+		<description>Kun forside artikkeltype, som presenterer bildekarusell for Live.</description>
+		<title>frontPageTitle</title>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="slideShow"/>
+		</Panel>
+	</ArticleType>	
+	
+	
+	<ArticleType>
+		<name>NetMeet</name>
+		<label>Netmeet</label>
+		<label lang="no">Nettmøte</label>
+		<description>Standard artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="netmeetBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+	
+	<ArticleType>
+		<name>imageSeriesArticle</name>
+		<label>Image series</label>
+		<label lang="no">Bildeserie</label>
+		<description>Bildeserie artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>wap</label>
+			<label lang="no">wap</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+	
+	<ArticleType>
+		<name>forwardArticle</name>
+		<label>Forward</label>
+		<label lang="no">Ekstern</label>
+		<description>Ekstern artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>forwardBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="forwardBasic"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>iframeArticle</name>
+		<label>iFrame</label>
+		<label lang="no">iFrame</label>
+		<description>iFrame artikkeltype</description>
+		<title>title</title>
+		<Panel>
+			<name>iframeBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="iframeBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPageIframe"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>quiz</name>
+		<title>title</title>
+		<label>Quiz</label>
+		<label lang="no">Quiz</label>
+		<!--<ref-relation-type-group>quiz</ref-relation-type-group>-->
+
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>Quiz</name>
+			<label>Quiz</label>
+			<label lang="no">Quiz</label>
+			<FieldGroup name="centralQuizGroup"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+			<FieldGroup name="fastSearch"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+
+
+
+
+
+	<ArticleType>
+		<name>blogger</name>
+		<label>Blogger</label>
+		<label lang="no">Blogger</label>
+		<description>Blogger artikkeltype</description>
+			<title>authorName</title>
+		<Panel>
+			<name>author</name>
+			<label>Blogger</label>
+			<label lang="no">Blogger</label>
+			<FieldGroup name="author"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>editor</name>
+		<label>Editor</label>
+		<label lang="no">Kommentator</label>
+		<description>Kommentator artikkeltype</description>
+			<title>authorName</title>
+		<Panel>
+			<name>author</name>
+			<label>Kommentator</label>
+			<label lang="no">Kommentator</label>
+			<FieldGroup name="author"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>blog</name>
+		<label>Blog</label>
+		<label lang="no">Blogg</label>
+		<description>Blogg artikkeltype</description>
+			<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+			<FieldGroup name="fastSearch"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+	<ArticleType>
+		<name>editorial</name>
+		<label>Editorial</label>
+		<label lang="no">Kommentar</label>
+		<description>Kommentar artikkeltype</description>
+			<title>title</title>
+		<Panel>
+			<name>newsBasic</name>
+			<label>Normal</label>
+			<label lang="no">Normal</label>
+			<FieldGroup name="newsBasic"/>
+		</Panel>
+		<Panel>
+			<name>frontPage</name>
+			<label>Frontpage</label>
+			<label lang="no">Forside</label>
+			<FieldGroup name="newsFrontPage"/>
+		</Panel>
+		<Panel>
+			<name>wap</name>
+			<label>WAP</label>
+			<label lang="no">WAP</label>
+			<FieldGroup name="wap"/>
+		</Panel>
+		<Panel>
+			<name>dbLinksTab</name>
+			<label>DataBase links</label>
+			<label lang="no">DataBase-lenker</label>
+			<FieldGroup name="dbLinks"/>
+			<FieldGroup name="fastSearch"/>
+		</Panel>
+		<Panel>
+			<name>mailtoTab</name>
+			<label>Varsle nettaviser</label>
+			<label lang="no">Varsle nettaviser</label>
+			<FieldGroup name="newsMailto"/>
+		</Panel>
+	</ArticleType>
+
+
+
+
+</IoTypeDef>
