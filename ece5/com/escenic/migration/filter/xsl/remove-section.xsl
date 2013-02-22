@@ -7,7 +7,6 @@
     <xsl:output indent="yes" encoding="UTF-8" version="1.0"/>
 
     <xsl:template match="i:section">
-        <xsl:copy-of select="current()"/>
     </xsl:template>
 
     <xsl:template match="i:content">
@@ -15,7 +14,7 @@
     </xsl:template>
 
     <xsl:template match="i:frontpage">
-        <xsl:copy-of select="current()"/>
+        <!--<xsl:copy-of select="current()"/>-->
     </xsl:template>
 
     <xsl:template match="i:escenic">
