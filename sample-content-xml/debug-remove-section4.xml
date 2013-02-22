@@ -1,0 +1,45 @@
+<escenic version="2.0">
+  <content keep-last-modified="true" source="escenic-migration" sourceid="162812" id="162812" publicationid="1" publicationname="fotball" type="xstreamVideoArticle" state="draft" publishdate="2010-03-03 14:50:07.0" last-modified="2010-03-03 14:52:04.953" creationdate="2010-03-03 14:52:04.953" statechange="2010-03-03 14:50:50.0" uid="1">
+    <priority>0</priority>
+    <section uniquename="video" name="tv" source="escenic-migration" sourceid="281" path="fotball/tv" homeSection="yes" parent.name="frontpage" parent.source="escenic-migration" parent.sourceid="2"></section>
+    <section uniquename="tvnorsk" name="Norsk" source="escenic-migration" sourceid="981" path="fotball/tv/norsk" parent.name="tv" parent.source="escenic-migration" parent.sourceid="281"></section>
+    <section uniquename="tvlandslaget" name="Landslaget" source="escenic-migration" sourceid="942" path="fotball/tv/landslaget" parent.name="tv" parent.source="escenic-migration" parent.sourceid="281"></section>
+    <section uniquename="tvrbk" name="RBK" source="escenic-migration" sourceid="982" path="fotball/tv/norsk/rbk" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvbrann" name="Brann" source="escenic-migration" sourceid="983" path="fotball/tv/norsk/brann" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvviking" name="Viking" source="escenic-migration" sourceid="984" path="fotball/tv/norsk/viking" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvstart" name="Start" source="escenic-migration" sourceid="987" path="fotball/tv/norsk/start" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvaalesund" name="Aalesund" source="escenic-migration" sourceid="1021" path="fotball/tv/norsk/aalesund" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvovrige" name="Øvrige" source="escenic-migration" sourceid="1022" path="fotball/tv/norsk/ovrige" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvskraablikk" name="Skråblikk" source="escenic-migration" sourceid="943" path="fotball/tv/skraablikk" parent.name="tv" parent.source="escenic-migration" parent.sourceid="281"></section>
+    <section uniquename="tvbodoglimt" name="Bodø/Glimt" source="escenic-migration" sourceid="1023" path="fotball/tv/norsk/bodoglimt" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvfredrikstad" name="Fredrikstad" source="escenic-migration" sourceid="1024" path="fotball/tv/norsk/fredrikstad" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvhamkam" name="HamKam" source="escenic-migration" sourceid="1025" path="fotball/tv/norsk/hamkam" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvlyn" name="Lyn" source="escenic-migration" sourceid="1026" path="fotball/tv/norsk/lyn" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvmolde" name="Molde" source="escenic-migration" sourceid="1027" path="fotball/tv/norsk/molde" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvstabak" name="Stabæk" source="escenic-migration" sourceid="1028" path="fotball/tv/norsk/stabak" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvvalerenga" name="Vålerenga" source="escenic-migration" sourceid="1029" path="fotball/tv/norsk/valerenga" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvtromso" name="Tromsø" source="escenic-migration" sourceid="1030" path="fotball/tv/norsk/tromso" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvstromsgodset" name="Strømsgodset" source="escenic-migration" sourceid="1031" path="fotball/tv/norsk/stromsgodset" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvlillestrom" name="Lillestrøm" source="escenic-migration" sourceid="1032" path="fotball/tv/norsk/lillestrom" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvnm2008" name="NM 2008" source="escenic-migration" sourceid="1033" path="fotball/tv/norsk/nm2008" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvem2008" name="EM 2008" source="escenic-migration" sourceid="944" path="fotball/tv/em2008" parent.name="tv" parent.source="escenic-migration" parent.sourceid="281"></section>
+    <section uniquename="tvhonefoss" name="Hønefoss" source="escenic-migration" sourceid="1034" path="fotball/tv/norsk/honefoss" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvhaugesund" name="Haugesund" source="escenic-migration" sourceid="1035" path="fotball/tv/norsk/haugesund" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <section uniquename="tvkongsvinger" name="Kongsvinger" source="escenic-migration" sourceid="1036" path="fotball/tv/norsk/kongsvinger" parent.name="Norsk" parent.source="escenic-migration" parent.sourceid="981"></section>
+    <field name="THUMBNAILURL">http://front.xstream.dk/fotballspilleren/GetThumbnail.php?ClipId=94049</field>
+    <field name="CREATEDBY">Sissel Sæther</field>
+    <field name="DURATION">0</field>
+    <field name="VIDEOCATEGORIES">Norsk fotball|Landslaget|RBK|Brann|Viking|Start|Aalesund|Øvrige|Skråblikk|Bodø/Glimt|Fredrikstad|HamKam|Lyn|Molde|Stabæk|Vålerenga|Tromsø|Strømsgodset|Lillestrøm|NM 2008|EM 2008|Hønefoss|Haugesund|Kongsvinger</field>
+    <field name="CREATEDDATE">2010-03-03 14:50:07</field>
+    <field name="UPDATEDBY">Sissel Sæther</field>
+    <field name="LASTEDITEDDATE">2010-03-03 14:50:50</field>
+    <field name="VIDEOURL">http://fotball.adressa.no/webtv/?id=94049</field>
+    <field name="TITLE">Adressa_egen_adressa_live_uke9_10</field>
+    <field name="STATUS">done</field>
+    <field name="MEDIAID">94049</field>
+    <field name="NUMFIRSTGROUPBODYIMAGES">0</field>
+    <field name="VIDEOFORMAT">flv</field>
+    <field name="VIDEORATING">0.0</field>
+    <field name="VIDEOHITS">0</field>
+  </content>
+</escenic>

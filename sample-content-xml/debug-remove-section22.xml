@@ -1,0 +1,37 @@
+<escenic version="2.0">
+  <content keep-last-modified="true" source="escenic-migration" sourceid="162664" id="162664" publicationid="1" publicationname="fotball" type="standardArticle" state="published" publishdate="2010-03-01 14:09:21.227" last-modified="2010-03-01 14:11:03.742" first-published="2010-03-01 14:09:21.227" creationdate="2010-03-01 14:09:21.227" statechange="2010-03-01 14:11:03.742" uid="1">
+    <priority>0</priority>
+    <section uniquename="eliteserien" name="Eliteserien" source="escenic-migration" sourceid="64" path="fotball/eliteserien" homeSection="yes" parent.name="frontpage" parent.source="escenic-migration" parent.sourceid="2"></section>
+    <section uniquename="forside_fvn" name="Fedrelandsvennen" source="escenic-migration" sourceid="46" path="fotball/fvn" parent.name="frontpage" parent.source="escenic-migration" parent.sourceid="2"></section>
+    <creator firstname="Øyvind" surname="Brenne" email="oyvind.brenne@fvn.no" username="obrenne"></creator>
+    <author firstname="Øyvind" surname="Brenne" email="oyvind.brenne@fvn.no" username="obrenne"></author>
+    <field name="MAILTO_BTR">false</field>
+    <field name="SHOWRELATEDLEAGUES">true</field>
+    <field name="ALLOWDEBATE"><ecs_selection>true</ecs_selection></field>
+    <field name="MAILTO_FVN">false</field>
+    <field name="BODYFULLWIDTH">false</field>
+    <field name="FASTSEARCHTIMESTAMP">1267449063643</field>
+    <field name="MAILTO_SA">false</field>
+    <field name="FPALTERNATETITLEDISPLAY"><ecs_selection>false</ecs_selection></field>
+    <field name="SHOWRELATEDTEAMS">true</field>
+    <field name="MAILTO_HA">false</field>
+    <field name="TITLE">Fløy i ledelsen</field>
+    <field name="FPNUMRELATEDARTICLES"><ecs_selection>3</ecs_selection></field>
+    <field name="FPIMAGEDISPLAYTYPE"><ecs_selection>fullWidth</ecs_selection></field>
+    <field name="SHOWRELATEDPLAYERS">true</field>
+    <field name="MAILTO_BT">false</field>
+    <field name="MAILTO_RB">false</field>
+    <field name="MAILTO_SMP">false</field>
+    <field name="BODY"><p>
+  8 min. 0-1: Raymond Hofstædter. Lurer Starts offsidefelle. Runder Kenneth 
+  Høie og setter ballen enkelt i mål. 
+</p></field>
+    <field name="FRONTPAGEPOLLDISPLAY">false</field>
+    <field name="LEADTEXT"><p>
+  Vi gir deg de viktigste hendelsene fra Start-Fløy.
+</p></field>
+    <field name="MAILTO_AP">false</field>
+    <field name="MAILTO_AA">false</field>
+    <field name="FASTSEARCHKEYWORDS">Kenneth Høie|Kenneth Høie|http://fotball.adressa.no/multimedia/spillere/Kenneth_Hoie_a.jpg; Raymond Hofstædter|Raymond Hofstædter</field>
+  </content>
+</escenic>
