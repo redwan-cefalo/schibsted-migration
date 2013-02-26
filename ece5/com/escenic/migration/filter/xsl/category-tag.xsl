@@ -6,7 +6,7 @@
 
     <xsl:output indent="yes" encoding="UTF-8" version="1.0"/>
 
-    <xsl:template match="i:section-ref">
+    <xsl:template match="i:section">
         <xsl:copy-of select="current()"/>
     </xsl:template>
 

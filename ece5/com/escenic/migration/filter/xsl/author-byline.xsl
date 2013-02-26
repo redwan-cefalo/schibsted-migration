@@ -1,17 +1,129 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns="http://xmlns.escenic.com/2009/import"
                 xmlns:i="http://xmlns.escenic.com/2009/import"
+                xmlns:data="http://xmlns.escenic.com/2009/import"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 exclude-result-prefixes="xsi i">
 
     <xsl:output indent="yes" encoding="UTF-8" version="1.0"/>
 
-    <xsl:template match="i:section-ref">
+
+  <data:map>
+    <data:entry key="1082">Doddo</data:entry>
+    <data:entry key="1643">Tore Strand</data:entry>
+    <data:entry key="1085">Hans Petter Jørgensen</data:entry>
+    <data:entry key="1101">Per-Christian Johansen</data:entry>
+    <data:entry key="1121">Ola Bernhus</data:entry>
+    <data:entry key="1161">Roy Ellingsen</data:entry>
+    <data:entry key="1162">Christian Thorkildsen</data:entry>
+    <data:entry key="1181">Bertil Valderhaug</data:entry>
+    <data:entry key="1182">Ole Kristian Sagbakken</data:entry>
+    <data:entry key="1201">Bjarte Valen</data:entry>
+    <data:entry key="1281">Lars Tjærnås</data:entry>
+    <data:entry key="1282">Knut Skeie Solberg</data:entry>
+    <data:entry key="1283">Øivind Holthe</data:entry>
+    <data:entry key="1361">Kristian Stenerud</data:entry>
+    <data:entry key="1413">Eivind Aarre</data:entry>
+    <data:entry key="1441">Knut Dørum Lillebakk</data:entry>
+    <data:entry key="1084">Sindre Halkjelsvik</data:entry>
+    <data:entry key="1481">Indridi Sigurdsson</data:entry>
+    <data:entry key="1521">Nils Chr. Helle</data:entry>
+    <data:entry key="1561">Kjetil Kroksæter</data:entry>
+    <data:entry key="1641">Anders Pamer</data:entry>
+    <data:entry key="1642">Øystein Vik</data:entry>
+    <data:entry key="1083">Petter Rasmus</data:entry>
+    <data:entry key="1086">Kjetil Kroksæter</data:entry>
+    <data:entry key="1087">Bertil Valderhaug</data:entry>
+    <data:entry key="1089">Helge Skuseth</data:entry>
+    <data:entry key="1090">Stig Nilssen</data:entry>
+    <data:entry key="1341">Ola Bernhus</data:entry>
+    <data:entry key="1088">Tore Strand</data:entry>
+  </data:map>
+
+    <xsl:template match="i:section">
         <xsl:copy-of select="current()"/>
     </xsl:template>
 
     <xsl:template match="i:content">
-        <xsl:copy-of select="current()"/>
+        <content>
+            <xsl:attribute name="type">
+                <xsl:value-of select="@type"/>
+            </xsl:attribute>
+            <xsl:attribute name="keep-last-modified">
+                <xsl:value-of select="@keep-last-modified"/>
+            </xsl:attribute>
+            <xsl:attribute name="source">
+                <xsl:value-of select="@source"/>
+            </xsl:attribute>
+            <xsl:attribute name="sourceid">
+                <xsl:value-of select="@sourceid"/>
+            </xsl:attribute>
+            <xsl:attribute name="id">
+                <xsl:value-of select="@id"/>
+            </xsl:attribute>
+            <xsl:attribute name="publicationid">
+                <xsl:value-of select="@publicationid"/>
+            </xsl:attribute>
+            <xsl:attribute name="publicationname">
+                <xsl:value-of select="@publicationname"/>
+            </xsl:attribute>
+            <xsl:attribute name="state">
+                <xsl:value-of select="@state"/>
+            </xsl:attribute>
+            <xsl:attribute name="publishdate">
+                <xsl:value-of select="@publishdate"/>
+            </xsl:attribute>
+            <xsl:attribute name="last-modified">
+                <xsl:value-of select="@last-modified"/>
+            </xsl:attribute>
+            <xsl:attribute name="first-published">
+                <xsl:value-of select="@first-published"/>
+            </xsl:attribute>
+            <xsl:attribute name="creationdate">
+                <xsl:value-of select="@creationdate"/>
+            </xsl:attribute>
+            <xsl:attribute name="statechange">
+                <xsl:value-of select="@statechange"/>
+            </xsl:attribute>
+            <xsl:attribute name="uid">
+                <xsl:value-of select="@uid"/>
+            </xsl:attribute>
+
+            <xsl:copy-of select="i:priority"/>
+            <xsl:copy-of select="i:uri"/>
+
+            <xsl:copy-of select="i:section"/>
+            <xsl:copy-of select="i:relation"/>
+
+            <creator firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></creator>
+            <author firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></author>
+
+            <field name="BYLINE">
+              <xsl:variable name="sectionSourceId">
+                <xsl:value-of select="i:section[@homeSection='yes']/@sourceid"/>
+              </xsl:variable>
+              <xsl:variable name="sectionByLine">
+                <xsl:value-of select="document('')/xsl:stylesheet/data:map/data:entry[@key=$sectionSourceId]"/>
+              </xsl:variable>
+
+              <xsl:choose>
+                <xsl:when test="$sectionByLine">
+                  <xsl:value-of select="$sectionByLine"/>
+                </xsl:when>
+                <xsl:when test="i:author">
+                  <xsl:for-each select="i:author">
+                    <xsl:if test="position() > 1">,</xsl:if><xsl:value-of select="@firstname"/><xsl:text> </xsl:text><xsl:value-of select="@surname"/>
+                  </xsl:for-each>
+                </xsl:when>
+                <xsl:when test="i:creator">
+                  <xsl:for-each select="i:creator">
+                    <xsl:if test="position() > 1">,</xsl:if><xsl:value-of select="@firstname"/><xsl:text> </xsl:text><xsl:value-of select="@surname"/>
+                  </xsl:for-each>
+                </xsl:when>
+              </xsl:choose>
+            </field>
+            <xsl:copy-of select="i:field"/>
+        </content>
     </xsl:template>
 
     <xsl:template match="i:frontpage">
