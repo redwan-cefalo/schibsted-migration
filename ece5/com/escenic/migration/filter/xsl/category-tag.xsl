@@ -11,7 +11,10 @@
     </xsl:template>
 
     <xsl:template match="i:content">
-        <xsl:copy-of select="current()"/>
+        <content>
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*[not(self::field[@name='TEAMCATEGORY'] or self::field[@name='LEAGUECATEGORY'] or self::field[@name='SPORTSCATEGORY'] or self::field[@name='SPORTTEAMCATEGORY'])]"/>
+        </content>
     </xsl:template>
 
     <xsl:template match="i:frontpage">

@@ -46,54 +46,8 @@
 
     <xsl:template match="i:content">
         <content>
-            <xsl:attribute name="type">
-                <xsl:value-of select="@type"/>
-            </xsl:attribute>
-            <xsl:attribute name="keep-last-modified">
-                <xsl:value-of select="@keep-last-modified"/>
-            </xsl:attribute>
-            <xsl:attribute name="source">
-                <xsl:value-of select="@source"/>
-            </xsl:attribute>
-            <xsl:attribute name="sourceid">
-                <xsl:value-of select="@sourceid"/>
-            </xsl:attribute>
-            <xsl:attribute name="id">
-                <xsl:value-of select="@id"/>
-            </xsl:attribute>
-            <xsl:attribute name="publicationid">
-                <xsl:value-of select="@publicationid"/>
-            </xsl:attribute>
-            <xsl:attribute name="publicationname">
-                <xsl:value-of select="@publicationname"/>
-            </xsl:attribute>
-            <xsl:attribute name="state">
-                <xsl:value-of select="@state"/>
-            </xsl:attribute>
-            <xsl:attribute name="publishdate">
-                <xsl:value-of select="@publishdate"/>
-            </xsl:attribute>
-            <xsl:attribute name="last-modified">
-                <xsl:value-of select="@last-modified"/>
-            </xsl:attribute>
-            <xsl:attribute name="first-published">
-                <xsl:value-of select="@first-published"/>
-            </xsl:attribute>
-            <xsl:attribute name="creationdate">
-                <xsl:value-of select="@creationdate"/>
-            </xsl:attribute>
-            <xsl:attribute name="statechange">
-                <xsl:value-of select="@statechange"/>
-            </xsl:attribute>
-            <xsl:attribute name="uid">
-                <xsl:value-of select="@uid"/>
-            </xsl:attribute>
-
-            <xsl:copy-of select="i:priority"/>
-            <xsl:copy-of select="i:uri"/>
-
-            <xsl:copy-of select="i:section"/>
-            <xsl:copy-of select="i:relation"/>
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*[not(self::creator or self::author)]"/>
 
             <creator firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></creator>
             <author firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></author>
@@ -122,7 +76,6 @@
                 </xsl:when>
               </xsl:choose>
             </field>
-            <xsl:copy-of select="i:field"/>
         </content>
     </xsl:template>
 
