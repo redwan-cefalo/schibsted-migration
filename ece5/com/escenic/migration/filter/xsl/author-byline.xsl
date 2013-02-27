@@ -47,7 +47,7 @@
     <xsl:template match="i:content">
         <content>
             <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="*[not(self::creator or self::author)]"/>
+            <xsl:copy-of select="*[not(name()='creator' or name()='author')]"/>
 
             <creator firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></creator>
             <author firstname="Redwan" surname="Noor" email="redwan@cefalo.no" username="cefalo_admin"></author>

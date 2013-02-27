@@ -204,7 +204,7 @@
     <xsl:template match="i:content">
         <content>
             <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="*[not(self::section)]"/>
+            <xsl:copy-of select="*[not(name()='section')]"/>
             <xsl:for-each select="i:section">
               <section-ref>
                 <xsl:variable name="sectionSourceId">

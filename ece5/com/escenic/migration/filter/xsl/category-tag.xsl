@@ -13,7 +13,26 @@
     <xsl:template match="i:content">
         <content>
             <xsl:copy-of select="@*"/>
-            <xsl:copy-of select="*[not(self::field[@name='TEAMCATEGORY'] or self::field[@name='LEAGUECATEGORY'] or self::field[@name='SPORTSCATEGORY'] or self::field[@name='SPORTTEAMCATEGORY'])]"/>
+            <xsl:copy-of select="*[not(name()='field')]"/>
+            <xsl:for-each select="i:field">
+              <xsl:choose>
+                <xsl:when test="@name='TEAMCATEGORY'">
+
+                </xsl:when>
+                <xsl:when test="@name='LEAGUECATEGORY'">
+
+                </xsl:when>
+                <xsl:when test="@name='SPORTSCATEGORY'">
+
+                </xsl:when>
+                <xsl:when test="@name='SPORTTEAMCATEGORY'">
+
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:copy-of select="current()"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
         </content>
     </xsl:template>
 

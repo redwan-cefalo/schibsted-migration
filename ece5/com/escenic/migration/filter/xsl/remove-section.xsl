@@ -14,7 +14,6 @@
     </xsl:template>
 
     <xsl:template match="i:frontpage">
-        <!--<xsl:copy-of select="current()"/>-->
     </xsl:template>
 
     <xsl:template match="i:escenic">

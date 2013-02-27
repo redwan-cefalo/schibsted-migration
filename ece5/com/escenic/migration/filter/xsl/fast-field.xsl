@@ -11,7 +11,24 @@
     </xsl:template>
 
     <xsl:template match="i:content">
-        <xsl:copy-of select="current()"/>
+        <content>
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*[not(name()='field')]"/>
+            <xsl:for-each select="i:field">
+              <xsl:choose>
+                <xsl:when test="@name='FASTSEARCHKEYWORDS'">
+                  <field name="FASTSEARCHKEYWORDS">
+                    <xsl:call-template name="cleanUpFirstField">
+                        <xsl:with-param name="fieldValue" select="current()"/>
+                    </xsl:call-template>
+                  </field>
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:copy-of select="current()"/>
+                </xsl:otherwise>
+              </xsl:choose>
+            </xsl:for-each>
+        </content>
     </xsl:template>
 
     <xsl:template match="i:frontpage">
@@ -38,5 +55,36 @@
         </xsl:element>
     </xsl:template>
 
+    <xsl:template name="cleanUpFirstField">
+        <xsl:param name="fieldValue"/>
+        <xsl:choose>
+            <xsl:when test="contains($fieldValue,';')">
+                <xsl:call-template name="printPlayerName">
+                    <xsl:with-param name="playerInfo" select="substring-before($fieldValue,';')"/>
+                </xsl:call-template>
+                <xsl:call-template name="cleanUpFirstField">
+                    <xsl:with-param name="fieldValue" select="substring-after($fieldValue,';')"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="printPlayerName">
+                    <xsl:with-param name="playerInfo" select="$fieldValue"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template name="printPlayerName">
+        <xsl:param name="playerInfo"/>
+        <xsl:choose>
+            <xsl:when test="contains($playerInfo,'|')">
+                <xsl:value-of select="substring-before($playerInfo,'|')"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$playerInfo"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        <xsl:text>;</xsl:text>
+    </xsl:template>
 
 </xsl:stylesheet>
