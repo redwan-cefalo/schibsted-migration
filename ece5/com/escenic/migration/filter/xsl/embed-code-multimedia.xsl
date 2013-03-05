@@ -11,7 +11,42 @@
     </xsl:template>
 
     <xsl:template match="i:content">
-        <xsl:copy-of select="current()"/>
+        <xsl:if test="i:field[@name = 'EMBED-CODE-FOR-LIVE']">
+            <content type="multimedia">
+                <xsl:copy-of select="@*[not(name() = 'source' or name() = 'id' or name() = 'type')]"/>
+                <xsl:attribute name="type">
+                    <xsl:text>multimedia</xsl:text>
+                </xsl:attribute>
+                <xsl:attribute name="source">
+                    <xsl:value-of select="@source"/><xsl:text>-embed-code-for-live</xsl:text>
+                </xsl:attribute>
+
+                <xsl:copy-of select="*[name()='creator' or name()='author' or name()='section-ref']"/>
+
+                <xsl:copy-of select="i:field[@name='TITLE']"/>
+                <field name="HTML">
+                    <xsl:copy-of select="i:field[@name='EMBED-CODE-FOR-LIVE']/*"/>
+                </field>
+                <field name="VIEW">
+                    <xsl:text>html</xsl:text>
+                </field>
+            </content>
+        </xsl:if>
+        <content>
+            <xsl:copy-of select="@*"/>
+            <xsl:if test="i:field[@name = 'EMBED-CODE-FOR-LIVE']">
+                <relation type="TOPMEDIAREL">
+                    <xsl:copy-of select="@sourceid"/>
+                    <xsl:attribute name="source">
+                        <xsl:value-of select="@source"/><xsl:text>-embed-code-for-live</xsl:text>
+                    </xsl:attribute>
+                    <field name="alignment">
+                        <value>left</value>
+                    </field>
+                </relation>
+            </xsl:if>
+            <xsl:copy-of select="*"/>
+        </content>
     </xsl:template>
 
     <xsl:template match="i:frontpage">
