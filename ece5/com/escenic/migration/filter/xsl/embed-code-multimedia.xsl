@@ -40,9 +40,6 @@
                     <xsl:attribute name="source">
                         <xsl:value-of select="@source"/><xsl:text>-embed-code-for-live</xsl:text>
                     </xsl:attribute>
-                    <field name="alignment">
-                        <value>left</value>
-                    </field>
                 </relation>
             </xsl:if>
             <xsl:copy-of select="*"/>

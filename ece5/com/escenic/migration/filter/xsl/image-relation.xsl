@@ -11,7 +11,45 @@
     </xsl:template>
 
     <xsl:template match="i:content">
-        <xsl:copy-of select="current()"/>
+        <content>
+            <xsl:copy-of select="@*"/>
+            <xsl:copy-of select="*[not(name()='relation')]"/>
+            <xsl:for-each select="i:relation">
+                <relation>
+                    <xsl:attribute name="source">
+                        <xsl:value-of select="@source"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="sourceid">
+                        <xsl:value-of select="@sourceid"/>
+                    </xsl:attribute>
+                    <xsl:attribute name="type">
+                        <xsl:choose>
+                            <xsl:when test="@source = 'escenic-v4-image' or @source = 'escenic-v4-media'">
+                                <xsl:choose>
+                                    <xsl:when test="@type = 'LEADTEXT_RELATED'">TEASERREL</xsl:when>
+                                    <xsl:otherwise>TOPMEDIAREL</xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:when>
+                            <xsl:when test="@source = 'escenic-v4-link'">
+                                <xsl:choose>
+                                    <xsl:when test="@type = 'LEADTEXT_RELATED'">TEASERREL</xsl:when>
+                                    <xsl:otherwise>STORYREL</xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:when>
+                            <xsl:when test="@source = 'escenic-migration'">
+                                <xsl:choose>
+                                    <xsl:when test="@type = 'LEADTEXT_RELATED'">TEASERREL</xsl:when>
+                                    <xsl:otherwise>STORYREL</xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="@type"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:attribute>
+                </relation>
+            </xsl:for-each>
+        </content>
     </xsl:template>
 
     <xsl:template match="i:frontpage">
