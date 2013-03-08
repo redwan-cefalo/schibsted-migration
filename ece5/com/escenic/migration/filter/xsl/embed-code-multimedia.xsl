@@ -28,7 +28,7 @@
                     <xsl:copy-of select="i:field[@name='EMBED-CODE-FOR-LIVE']/*"/>
                 </field>
                 <field name="VIEW">
-                    <xsl:text>html</xsl:text>
+                    <value><xsl:text>html</xsl:text></value>
                 </field>
             </content>
         </xsl:if>
