@@ -51,7 +51,7 @@
     <data:entry key="1410">volleyball</data:entry>
     <data:entry key="1411">basketball</data:entry>
     <data:entry key="1399">alpinsport</data:entry>
-    <data:entry key="1409">golfsport</data:entry>
+    <data:entry key="1409">golf</data:entry>
     <data:entry key="1403">kombinertsport</data:entry>
     <data:entry key="1402">snowboard</data:entry>
     <data:entry key="1412">tennis</data:entry>
@@ -105,9 +105,9 @@
     <data:entry key="1541">fotball_blogg</data:entry>
     <data:entry key="1482">fotball_blogg</data:entry>
     <data:entry key="1044">fotball_frankrike</data:entry>
-    <data:entry key="1041">fotball_spania</data:entry>
+    <data:entry key="1041">spania</data:entry>
     <data:entry key="1043">fotball_tyskland</data:entry>
-    <data:entry key="1042">fotball_italia</data:entry>
+    <data:entry key="1042">italia</data:entry>
     <data:entry key="461">fotball_landslaget</data:entry>
     <data:entry key="64">fotball_eliteserien</data:entry>
     <data:entry key="741">fotball_eliteserien</data:entry>
@@ -130,7 +130,7 @@
     <data:entry key="1142">fotball_vm</data:entry>
     <data:entry key="122">fotball_vm</data:entry>
     <data:entry key="116">mesterligaen</data:entry>
-    <data:entry key="124">fotball_nettmøte</data:entry>
+    <data:entry key="124">nettmote</data:entry>
     <data:entry key="69">fotball_internasjonal</data:entry>
     <data:entry key="1061">fotball_dagenstolver</data:entry>
     <data:entry key="501">fotball_andrediv</data:entry>
