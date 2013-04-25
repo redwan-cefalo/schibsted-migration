@@ -69,11 +69,16 @@
                     <xsl:if test="position() > 1">,</xsl:if><xsl:value-of select="@firstname"/><xsl:text> </xsl:text><xsl:value-of select="@surname"/>
                   </xsl:for-each>
                 </xsl:when>
+<!--
                 <xsl:when test="i:creator">
                   <xsl:for-each select="i:creator">
                     <xsl:if test="position() > 1">,</xsl:if><xsl:value-of select="@firstname"/><xsl:text> </xsl:text><xsl:value-of select="@surname"/>
                   </xsl:for-each>
                 </xsl:when>
+-->
+                <xsl:otherwise>
+                    <xsl:text>100% Sport</xsl:text>
+                </xsl:otherwise>
               </xsl:choose>
             </field>
         </content>
