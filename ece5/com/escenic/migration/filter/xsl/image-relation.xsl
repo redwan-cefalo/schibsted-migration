@@ -47,6 +47,21 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:attribute>
+                    <xsl:for-each select="i:field">
+                        <xsl:choose>
+                            <!--ALIGNMENT field is not available in summary -->
+                            <xsl:when test="@name='ALIGNMENT' or @name='alignment'">
+<!--
+                                <xsl:if  test="current()/* = 'left' or current()/* = 'LEFT' or current()/* = 'right' or current()/* = 'RIGHT' or current()/* = 'center' or current()/* = 'CENTER'">
+                                    <xsl:copy-of select="current()"/>
+                                </xsl:if>
+-->
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:copy-of select="current()"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:for-each>
                 </relation>
             </xsl:for-each>
         </content>
